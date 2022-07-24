@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /**
+        * @param {string[]} strs
+        * @return {string}
+        */
+        var resual = "";
+        var array=["ab","abcd","abc"]
+
+       
+       
+
+        var longestCommonPrefix = function(strs) {
+            
+            
+            for(var value of strs){
+                if(value == strs[0]){
+                    continue;
+                }
+               
+               
+                for(var index in strs[0]){
+                    
+                    if(value[index] !== strs[0][index]){
+                        strs[0]=value.slice(0,index);
+                        break;
+                    }else{
+                        
+                    }
+                    console.log(strs[0],index);
+                       
+                }
+              
+            }
+
+            return strs[0];
+            
+        };
+
+
+
+        var c  = longestCommonPrefix(array);
+        console.log(c);
+        
+    </script>
+    
+</body>
+</html>
